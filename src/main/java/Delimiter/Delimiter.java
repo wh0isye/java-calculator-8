@@ -16,4 +16,7 @@ public class Delimiter {
         }
     }
 
+    public String getDelimiter() {
+        return customDelimiter;
+    }
 }
