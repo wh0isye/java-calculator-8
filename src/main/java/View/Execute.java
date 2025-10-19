@@ -1,13 +1,12 @@
 package View;
 
 import Operator.Operator;
-import java.util.Scanner;
+import camp.nextstep.edu.missionutils.Console;
 
 public class Execute {
     public void print() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("덧셈할 문자열을 입력해 주세요.");
-        String str = scanner.nextLine();
+        String str = Console.readLine();
 
         Operator operator = new Operator();
 
@@ -19,7 +18,5 @@ public class Execute {
         } else {
             System.out.println("결과 : " + operator.getResult(str));
         }
-
-        scanner.close();
     }
 }
