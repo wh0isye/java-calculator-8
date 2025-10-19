@@ -23,6 +23,10 @@ public class CustomDelimiterParser implements DelimiterParser {
 
     @Override
     public String parse(String input) {
-        return input;
+        if (hasCustomDelimiter(input)) {
+            return input.substring(input.indexOf(CUSTOM_DELIMITER_PREFIX) + 2, input.indexOf(CUSTOM_DELIMITER_SUFFIX));
+        } else {
+            return "default";
+        }
     }
 }
