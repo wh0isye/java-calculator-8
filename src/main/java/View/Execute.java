@@ -2,11 +2,18 @@ package View;
 
 import Operator.Operator;
 import camp.nextstep.edu.missionutils.Console;
+import java.util.NoSuchElementException;
 
 public class Execute {
     public void print() {
         System.out.println("덧셈할 문자열을 입력해 주세요.");
-        String str = Console.readLine();
+        String str;
+        try {
+            str = Console.readLine();
+        } catch (NoSuchElementException e) {
+            // 읽을 라인이 없어 예외가 발생하면, 입력을 빈 문자열("")로 간주한다.
+            str = "";
+        }
 
         Operator operator = new Operator();
 
