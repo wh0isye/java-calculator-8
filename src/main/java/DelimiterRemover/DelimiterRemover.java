@@ -17,4 +17,7 @@ public class DelimiterRemover {
         }
     }
 
+    public String[] removeDelimiter(String input, String delimiter) {
+        return input.split(delimiter);
+    }
 }
